@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ELYSIAN | Yayıncı Adayları ve Oyun Topluluğu Discord Sunucusu</title>
+<meta name="description" content="ELYSIAN: yeni başlayan yayıncılar, oyuncular ve sohbet severler için Discord topluluğu. İş birlikleri, çekilişler, Minecraft sunucusu ve kolay başvuru.">
+<meta name="theme-color" content="#5b3fd1">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ALAN_ADIN.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ELYSIAN | Discord Topluluğu">
+<meta property="og:description" content="Yayıncı adayları, oyuncular ve sohbet severler için Discord sunucusu ve Minecraft topluluğu.">
+<meta property="og:url" content="https://ALAN_ADIN.com/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d0a1f;--card:#1a1438;--tx:#ece9ff;--mu:#b4acdf;--a:#8b5cf6;--b:#3b82f6;--bd:#2f2760;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f4f1ff;--card:#fff;--tx:#1d1640;--mu:#4d4580;--bd:#d9d2f7}}
+:root[data-theme="light"]{--bg:#f4f1ff;--card:#fff;--tx:#1d1640;--mu:#4d4580;--bd:#d9d2f7}
+:root[data-theme="dark"]{--bg:#0d0a1f;--card:#1a1438;--tx:#ece9ff;--mu:#b4acdf;--bd:#2f2760}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Inter,system-ui,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:Cinzel,Georgia,serif;margin:0}
+:focus-visible{outline:3px solid #facc15;outline-offset:2px}
+.skip{position:absolute;left:-999px;top:0;background:#facc15;color:#000;padding:10px 16px;z-index:99}
+.skip:focus{left:10px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;display:flex;align-items:center;gap:16px;padding:10px 5%;background:var(--bg);border-bottom:1px solid var(--bd)}
+nav img{height:38px;width:auto}
+nav b{font-family:Cinzel,serif;letter-spacing:2px;margin-right:auto}
+nav a:not(.btn){color:var(--mu);text-decoration:none;font-size:14px}
+nav a:not(.btn):hover{color:var(--tx)}
+#mb{display:none;background:none;border:1px solid var(--bd);color:var(--tx);border-radius:8px;font-size:22px;padding:2px 10px;cursor:pointer}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;background:linear-gradient(135deg,#6d3fe0,#2563eb);color:#fff!important;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:15px;font-family:inherit}
+.btn:hover{filter:brightness(1.15)}
+.btn.o{background:transparent;border:1px solid var(--a);color:var(--tx)!important}
+.hero{text-align:center;padding:80px 5%;background:radial-gradient(ellipse at top,#5b3fd1 0,transparent 60%),radial-gradient(ellipse at 80% 100%,#2563eb55 0,transparent 55%)}
+.hero img{width:110px;height:auto;filter:drop-shadow(0 0 25px #8b5cf6)}
+.hero h1{font-size:clamp(40px,9vw,76px);letter-spacing:6px;color:var(--tx);margin:10px 0}
+.hero p{max-width:620px;margin:0 auto 26px;color:var(--mu);font-size:18px}
+.hero .btn{margin:6px}
+section{padding:64px 5%;max-width:1100px;margin:auto}
+section>h2{text-align:center;font-size:30px;margin-bottom:8px}
+.sub{text-align:center;color:var(--mu);margin:0 auto 34px;max-width:560px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:24px;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--a)}
+.card .ic{font-size:30px}
+.card h3{font-size:18px;margin:10px 0 6px}
+.card p{margin:0;color:var(--mu);font-size:15px}
+.mc{background:linear-gradient(135deg,#4c1d95,#1e3a8a);border-radius:20px;padding:34px;color:#fff}
+.mc h2{margin:0 0 8px}
+.ip{display:inline-flex;gap:10px;align-items:center;background:#0008;border:1px dashed #c4b5fd;padding:8px 8px 8px 16px;border-radius:12px;font-family:monospace;margin:12px 0}
+.ip .btn{padding:6px 14px;font-size:13px}
+.cta{text-align:center;background:linear-gradient(135deg,#4c1d95,#1e40af);border-radius:22px;padding:46px 20px;color:#fff}
+.cta h2{margin-bottom:10px}
+.cta .btn{background:#fff;color:#2b1a6b!important;font-size:17px;padding:14px 34px}
+form{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:28px;display:grid;gap:14px}
+label{font-size:14px;color:var(--mu);display:grid;gap:6px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.note{font-size:13px;color:var(--mu);margin:0}
+#res{display:none;white-space:pre-wrap;background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:14px;font-size:14px}
+.acts{display:none;flex-wrap:wrap;gap:10px}
+.ct{text-align:center}.ct .btn{margin:6px}
+footer{text-align:center;padding:30px 5%;color:var(--mu);border-top:1px solid var(--bd);font-size:14px}
+footer button{background:none;border:0;color:var(--mu);text-decoration:underline;cursor:pointer;font:inherit;margin:0 8px}
+dialog{max-width:640px;width:92%;max-height:85vh;background:var(--card);color:var(--tx);border:1px solid var(--a);border-radius:16px;padding:24px}
+dialog::backdrop{background:#000a}
+dialog h2{font-size:22px;margin-bottom:10px}dialog h3{font-size:15px;margin:14px 0 4px}dialog p,dialog li{font-size:14.5px;color:var(--mu);margin:4px 0}
+#ck{position:fixed;left:0;right:0;bottom:env(safe-area-inset-bottom,0px);z-index:20;background:var(--card);border-top:2px solid var(--a);padding:16px 5%;display:none;gap:14px;align-items:center;flex-wrap:wrap}
+#ck p{margin:0;flex:1 1 300px;font-size:14px}
+#ck .btn{padding:9px 20px;font-size:14px}
+@media(max-width:700px){.row{grid-template-columns:1fr}#mb{display:block}nav .l{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 5%;border-bottom:1px solid var(--bd)}nav .l.on{display:flex}}
+nav .l{display:flex;gap:16px;align-items:center}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">İçeriğe geç</a>
+<nav aria-label="Ana menü">
+<img data-logo alt="ELYSIAN logosu: mor-mavi kanatlı mühür" width="38" height="40"><b>ELYSIAN</b>
+<button id="mb" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="lk">☰</button>
+<div class="l" id="lk"><a href="#hakkinda">Hakkında</a><a href="#etkinlik">Etkinlikler</a><a href="#minecraft">Minecraft</a><a href="#basvuru">Başvuru</a><a href="#iletisim">İletişim</a><a class="btn" href="https://discord.gg/bUkR827Az" target="_blank" rel="noopener">Katıl</a></div>
+</nav>
+
+<main id="main">
+<header class="hero">
+<img data-logo alt="ELYSIAN logosu" width="110" height="116">
+<h1>ELYSIAN</h1>
+<p>Yayıncılığa yeni başlayanların, oyuncuların ve sohbet severlerin buluşma noktası. Ücretsiz katıl, hemen arkadaşlarını bul.</p>
+<a class="btn" href="https://discord.gg/bUkR827Az" target="_blank" rel="noopener">Hemen Discord'a Katıl</a><a class="btn o" href="#basvuru">Başvuru Yap</a>
+</header>
+
+<section id="hakkinda" aria-labelledby="h1a">
+<h2 id="h1a">Biz Kimiz?</h2>
+<p class="sub">ELYSIAN; yayıncı olmak isteyenlere destek olan, eğlenceli ve samimi bir Discord topluluğu.</p>
+<div class="grid">
+<div class="card"><div class="ic" aria-hidden="true">🎥</div><h3>Yayıncı Rehberliği</h3><p>Yeni başlayanlara ipuçları, geri bildirim ve destek.</p></div>
+<div class="card"><div class="ic" aria-hidden="true">💬</div><h3>Sohbet &amp; Oyun</h3><p>Aktif sohbet kanalları ve birlikte oynayacağın arkadaşlar.</p></div>
+<div class="card"><div class="ic" aria-hidden="true">🤝</div><h3>İş Birlikleri</h3><p>Düzenli iş birlikleri ve fırsatlar sunucuda paylaşılır.</p></div>
+<div class="card"><div class="ic" aria-hidden="true">🎁</div><h3>Çekilişler</h3><p>Üyelerimize özel düzenli çekilişler ve ödüller.</p></div>
+</div>
+</section>
+
+<section id="etkinlik" aria-labelledby="h2a">
+<h2 id="h2a">Etkinlikler &amp; Çekilişler</h2>
+<p class="sub">Güncel çekiliş ve duyurular için Discord sunucumuzdaki duyuru kanallarını takip et.</p>
+<div class="grid">
+<div class="card"><div class="ic" aria-hidden="true">🎉</div><h3>Haftalık Çekilişler</h3><p>Sunucuya katılan herkes katılabilir.</p></div>
+<div class="card"><div class="ic" aria-hidden="true">🏆</div><h3>Topluluk Etkinlikleri</h3><p>Oyun geceleri, turnuvalar ve sohbet etkinlikleri.</p></div>
+<div class="card"><div class="ic" aria-hidden="true">📣</div><h3>Duyurular</h3><p>İş birlikleri ve fırsatlar önce Discord'da duyurulur.</p></div>
+</div>
+</section>
+
+<section id="minecraft" aria-labelledby="h3a">
+<div class="mc">
+<h2 id="h3a"><span aria-hidden="true">⛏️</span> ELYSIAN Minecraft</h2>
+<p>Herkese açık Minecraft sunucumuza sponsorumuz Mythace üzerinden giriş yapabilirsin.</p>
+<p style="margin-top:14px"><a class="btn" style="background:#fff;color:#2b1a6b!important" href="https://mythace.com/minecraft" target="_blank" rel="noopener sponsored">Minecraft'a Gir</a></p>
+<p style="font-size:14px;opacity:.9;margin-top:14px">Sponsorumuz: <a href="https://mythace.com/" target="_blank" rel="noopener sponsored" style="color:#fff;font-weight:600">Mythace</a></p>
+</div>
+</section>
+
+<section id="basvuru" aria-labelledby="h4a">
+<h2 id="h4a">Sunucu Başvurusu</h2>
+<p class="sub">Formu doldur, oluşan başvuru metnini Discord'da yetkililere ilet.</p>
+<form id="f" novalidate>
+<div class="row">
+<label for="n">Discord kullanıcı adın *<input id="n" name="n" required autocomplete="username" placeholder="kullanici"></label>
+<label for="y">Yaşın *<input id="y" name="y" type="number" inputmode="numeric" min="10" max="99" required></label>
+</div>
+<label for="t">Başvuru türü<select id="t"><option>Yayıncı adayı</option><option>Yetkili (Moderatör)</option><option>İş birliği</option><option>Minecraft oyuncusu</option></select></label>
+<label for="l">Yayın / sosyal medya linkin (varsa)<input id="l" type="url" placeholder="https://"></label>
+<label for="a">Kendini tanıt *<textarea id="a" rows="4" required placeholder="Neden ELYSIAN? Bize kendinden bahset..."></textarea></label>
+<label style="grid-template-columns:auto 1fr;align-items:start;gap:10px"><input id="k" type="checkbox" required style="width:auto;margin-top:5px"><span>Bilgilerimin başvuru değerlendirmesi için kullanılmasını ve <a href="#" data-d="gz" style="color:var(--a)">Gizlilik Politikası</a>'nı kabul ediyorum. *</span></label>
+<button class="btn" type="submit">Başvuru Metnini Oluştur</button>
+<p id="err" role="alert" style="color:#f87171;margin:0;font-size:14px"></p>
+<div id="res" aria-live="polite"></div>
+<div class="acts" id="acts"><button class="btn" type="button" id="cp">Kopyala</button><a class="btn o" id="go" href="https://discord.gg/bUkR827Az" target="_blank" rel="noopener">Discord'a Git</a></div>
+<p class="note">Başvuru bilgilerin bu sitede saklanmaz; yalnızca senin göndermeni sağladığın metne dönüşür.</p>
+</form>
+</section>
+
+<section class="ct" id="iletisim" aria-labelledby="h5a">
+<h2 id="h5a">İletişim</h2>
+<p class="sub">Sorularını Discord sunucumuzdan bize iletebilirsin.</p>
+<a class="btn" href="https://discord.gg/bUkR827Az" target="_blank" rel="noopener">Discord Sunucusu</a>
+</section>
+
+<section><div class="cta"><h2>Topluluğumuza Katılmaya Hazır mısın?</h2><p>Ücretsiz, 10 saniyede katıl. Yayıncı yolculuğun burada başlıyor.</p><a class="btn" href="https://discord.gg/bUkR827Az" target="_blank" rel="noopener">Discord'a Katıl</a></div></section>
+</main>
+
+<footer>
+<p>© 2026 ELYSIAN — Tüm hakları saklıdır. Sponsor: <a href="https://mythace.com/" target="_blank" rel="noopener sponsored" style="color:var(--a)">Mythace</a></p>
+<button type="button" data-d="gz">Gizlilik Politikası</button><button type="button" data-d="ks">Kullanım Şartları</button><button type="button" id="cs">Çerez Tercihleri</button>
+</footer>
+
+<dialog id="gz" aria-labelledby="gzt"><h2 id="gzt">Gizlilik Politikası</h2>
+<p>Son güncelleme: 4 Ekim 2026. ELYSIAN topluluğu olarak gizliliğine önem veriyoruz.</p>
+<h3>Toplanan veriler</h3><p>Başvuru formuna yazdığın bilgiler sitede saklanmaz; metin tarayıcında oluşur ve onu sen Discord'a iletirsin. Onay verirsen anonim ziyaret istatistikleri (çerez) toplanabilir.</p>
+<h3>Kullanım amacı</h3><p>Başvuruları değerlendirmek, siteyi geliştirmek ve seninle iletişim kurmak.</p>
+<h3>Üçüncü taraflar</h3><p>Discord, Mythace (sponsor, Minecraft girişi) ve Google (yazı tipleri, analitik) kendi gizlilik politikalarına tabidir. Verilerin satılmaz.</p>
+<h3>Hakların</h3><p>6698 sayılı KVKK kapsamında verilerine erişme, düzeltme ve silme talep edebilirsin; bunun için Discord sunucumuzdaki yetkililere ulaşman yeterli.</p>
+<p><button class="btn" data-x type="button">Kapat</button></p></dialog>
+
+<dialog id="ks" aria-labelledby="kst"><h2 id="kst">Kullanım Şartları</h2>
+<p>Son güncelleme: 4 Ekim 2026. Siteyi kullanarak aşağıdaki şartları kabul etmiş olursun.</p>
+<ul><li>Siteyi yasalara ve genel ahlaka uygun kullanacaksın.</li><li>Başvurularda doğru bilgi vereceksin; sahte veya yanıltıcı başvurular reddedilir.</li><li>Topluluk kurallarına uymayanlar sunucudan uzaklaştırılabilir.</li><li>Site içeriği ELYSIAN'a aittir; izinsiz kopyalanamaz.</li><li>Başvurunun kabulü garanti değildir; karar yetkililere aittir.</li><li>Şartlar önceden haber verilmeden güncellenebilir.</li></ul>
+<p>İletişim: Discord sunucumuzdaki yetkililer.</p>
+<p><button class="btn" data-x type="button">Kapat</button></p></dialog>
+
+<div id="ck" role="dialog" aria-label="Çerez onayı"><p>Siteyi geliştirmek için anonim analitik çerezleri kullanabiliriz. Detaylar için <a href="#" data-d="gz" style="color:var(--a)">Gizlilik Politikası</a>.</p><button class="btn" id="ok" type="button">Kabul Et</button><button class="btn o" id="no" type="button">Reddet</button></div>
+
+<script>window.__LOGO='data:image/png;base64,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';</script>
+<script>
+var GA_ID='G-XXXXXXXXXX',DC='https://discord.gg/bUkR827Az';
+var $=function(i){return document.getElementById(i)};
+document.querySelectorAll('[data-logo]').forEach(function(i){i.src=window.__LOGO})
+function ls(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+function ga(){if(GA_ID.indexOf('XXXX')>-1||document.getElementById('gas'))return;var s=document.createElement('script');s.id='gas';s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA_ID,{anonymize_ip:true})}
+function ck(){var c=ls('ck');if(c==='1')ga();$('ck').style.display=c?'none':'flex'}
+$('ok').onclick=function(){ls('ck','1');ck()};$('no').onclick=function(){ls('ck','0');ck()};
+$('cs').onclick=function(){try{localStorage.removeItem('ck')}catch(e){}$('ck').style.display='flex'};ck();
+document.querySelectorAll('[data-d]').forEach(function(a){a.onclick=function(e){e.preventDefault();$(a.getAttribute('data-d')).showModal()}});
+document.querySelectorAll('[data-x]').forEach(function(b){b.onclick=function(){b.closest('dialog').close()}});
+$('mb').onclick=function(){var o=$('lk').classList.toggle('on');this.setAttribute('aria-expanded',o)};
+document.querySelectorAll('#lk a').forEach(function(a){a.onclick=function(){$('lk').classList.remove('on')}});
+var txt='';
+$('f').onsubmit=function(e){e.preventDefault();var er=$('err');er.textContent='';
+var n=$('n').value.trim(),y=+$('y').value,a=$('a').value.trim(),l=$('l').value.trim();
+if(!n||!a){er.textContent='Lütfen zorunlu alanları doldur.';return}
+if(!(y>=10&&y<=99)){er.textContent='Geçerli bir yaş gir.';return}
+if(l&&!/^https?:\/\/.+\..+/.test(l)){er.textContent='Link https:// ile başlamalı.';return}
+if(!$('k').checked){er.textContent='Devam etmek için onay kutusunu işaretle.';return}
+txt='📋 ELYSIAN BAŞVURUSU\nKullanıcı: '+n+'\nYaş: '+y+'\nTür: '+$('t').value+'\nLink: '+(l||'-')+'\nTanıtım: '+a;
+var r=$('res');r.textContent=txt;r.style.display='block';$('acts').style.display='flex';
+if(window.gtag)gtag('event','basvuru_olusturuldu')};
+$('cp').onclick=function(){var b=this;try{navigator.clipboard.writeText(txt);b.textContent='Kopyalandı!'}catch(x){b.textContent='Metni elle kopyala'}};
+</script>
+</body>
+</html>
